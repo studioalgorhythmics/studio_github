@@ -66,8 +66,8 @@ class CA {
       if (cells[i] == 1) fill(0);
       else               fill(255);
       //noStroke();
-      rect(i*w, generation*w, w, w);
-      //rect(i*w, w, w, 50);
+      //rect(i*w, generation*w, w, w);
+      rect(i*w, w, w, 50);
     }
   }
     

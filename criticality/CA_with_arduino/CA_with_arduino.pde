@@ -14,7 +14,7 @@ for(int i = 0; i < values.length; i++)
 values[i] = Arduino.LOW;  
     
 println(Arduino.list());
-arduino = new Arduino(this, Arduino.list()[4], 57600);
+arduino = new Arduino(this, Arduino.list()[2], 57600);
 for (int i = 0; i <= 13; i++)
   arduino.pinMode(i, Arduino.OUTPUT);  
   
@@ -24,7 +24,7 @@ int[] ruleset = {
 0, 1, 0, 1, 1, 0, 1, 0
 }; // An initial rule system
 ca = new CA(ruleset); // Initialize CA
-frameRate(50);
+frameRate(15);
 
 }
 
@@ -32,7 +32,7 @@ void draw() {
 
 for(int i = 0; i < values.length; i++)
     values[i] = Arduino.LOW;  
-ca.rulegenerator((byte)225);
+ca.rulegenerator((byte)95);
 ca.display(); // Draw the CA
 ca.generate();
 ca.playsound();
