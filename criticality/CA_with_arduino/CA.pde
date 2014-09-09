@@ -65,12 +65,12 @@ class CA {
     for (int i = 0; i < cells.length; i++) {
       if (cells[i] == 1) fill(0);
       else               fill(255);
-      //noStroke();
-      //rect(i*w, generation*w, w, w);
-      rect(i*w, w, w, 50);
+      noStroke();
+      rect(i*w, generation*w, w, w);
     }
   }
-    
+  
+/*    
 void playsound() {
     for (int i = 0; i < cells.length; i++) {
       if (cells[i] == 1) {
@@ -82,7 +82,9 @@ void playsound() {
       values[i] = Arduino.LOW;
       }
     }
-  }    
+  }  
+
+*/  
   
   
   // Implementing the Wolfram rules
