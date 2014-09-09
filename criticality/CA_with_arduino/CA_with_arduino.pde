@@ -9,7 +9,7 @@ void setup() {
 for(int i = 0; i < values.length; i++)
 values[i] = Arduino.LOW;
 println(Arduino.list());
-arduino = new Arduino(this, Arduino.list()[2], 57600);
+arduino = new Arduino(this, Arduino.list()[4], 57600);
 for (int i = 0; i <= 13; i++)
 arduino.pinMode(i, Arduino.OUTPUT);
 size(1050, 1000);

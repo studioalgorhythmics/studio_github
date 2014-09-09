@@ -70,7 +70,10 @@ class CA {
           noStroke();
           //rect(i*w, (y-1)*w, w, w);       
           rect((displayWidth/2)-((cols/2)*w)+w*i, (y-1)*w, w, w); // moveing the cells into the center
-        }
+         
+         // arduino.digitalWrite(i+2, Arduino.HIGH);  
+         
+      }
       }
     }
   }  

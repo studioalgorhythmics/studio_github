@@ -20,9 +20,10 @@ void setup() {
 
   for(int i = 0; i < values.length; i++)
   values[i] = Arduino.LOW;  
+  
   println(Arduino.list());
-  arduino = new Arduino(this, Arduino.list()[2], 57600);
-  for (int i = 2; i <= 50; i++)
+  arduino = new Arduino(this, Arduino.list()[4], 57600);
+  for (int i = 2; i <= 49; i++) //set the arduino digital pins as outputs
   arduino.pinMode(i, Arduino.OUTPUT);  
   
   frameRate(10);
