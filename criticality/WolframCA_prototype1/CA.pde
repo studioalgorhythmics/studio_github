@@ -21,20 +21,7 @@ class CA {
     matrix = new int[cols][rows];
     restart();
   }
-  
-  
-  void setuparduino(){
-/*
-  for(int i = 0; i < rows.length; i++)
-  rows[i] = Arduino.LOW;  
-  println(Arduino.list());
-  arduino = new Arduino(this, Arduino.list()[4], 57600);
-  for (int i = 0; i <= 13; i++)
-  arduino.pinMode(i, Arduino.OUTPUT);  
-
-*/
-
-  }  
+    
 
   // Make a random ruleset
   void randomize() {
@@ -68,28 +55,7 @@ class CA {
     }
     generation++;
   }
-/*
-  void playsound() {
-    int offset = generation%rows;
-
-    for (int i = 0; i < cols; i++) {
-      for (int j = 0; j < rows; j++) {
-        int y = j - offset;
-        if (y <= 0) y = rows + y;
-        // Only draw if cell state is 1
-        if (matrix[i][j] == 1) {
-        arduino.digitalWrite(i, Arduino.HIGH);
-        values[i] = Arduino.HIGH;
-        }
-        else{
-        arduino.digitalWrite(i, Arduino.LOW);
-        values[i] = Arduino.LOW;   
-        }  
-      }
-    }
-  }
-*/  
- 
+  
   // This is the easy part, just draw the cells, fill 255 for '1', fill 0 for '0'  
   void display() {
     int offset = generation%rows;
@@ -102,15 +68,13 @@ class CA {
         if (matrix[i][j] == 1) {
           fill(0);
           noStroke();
-          //rect(i*w, (y-1)*w, w, w);
-          
+          //rect(i*w, (y-1)*w, w, w);       
           rect((displayWidth/2)-((cols/2)*w)+w*i, (y-1)*w, w, w); // moveing the cells into the center
-          
         }
       }
     }
   }  
-
+  
   // Implementing the Wolfram rules
   // This is the concise conversion to binary way
   int rules (int a, int b, int c) {
