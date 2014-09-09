@@ -23,10 +23,10 @@ void setup() {
   
   println(Arduino.list());
   arduino = new Arduino(this, Arduino.list()[4], 57600);
-  for (int i = 2; i <= 49; i++) //set the arduino digital pins as outputs
+  for (int i = 0; i <= 54; i++) //set the arduino digital pins as outputs
   arduino.pinMode(i, Arduino.OUTPUT);  
   
-  frameRate(10);
+  frameRate(60);
   background(255);
   //int[] ruleset = {0,1,1,1,1,0,1,1};   // Rule 222  
   //int[] ruleset = {0,1,1,1,1,1,0,1};   // Rule 190  
