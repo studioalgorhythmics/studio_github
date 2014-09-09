@@ -59,8 +59,11 @@ class CA {
   // This is the easy part, just draw the cells, fill 255 for '1', fill 0 for '0'  
   void display() {
     int offset = generation%rows;
+    for (int i = 0; i < cols; i++) { 
 
-    for (int i = 0; i < cols; i++) {
+
+
+
       for (int j = 0; j < rows; j++) {
         int y = j - offset;
         if (y <= 0) y = rows + y;
@@ -69,10 +72,7 @@ class CA {
           fill(0);
           noStroke();
           //rect(i*w, (y-1)*w, w, w);       
-          rect((displayWidth/2)-((cols/2)*w)+w*i, (y-1)*w, w, w); // moveing the cells into the center
-         
-         // arduino.digitalWrite(i+2, Arduino.HIGH);  
-         
+          rect((displayWidth/2)-((cols/2)*w)+w*i, (y-1)*w, w, w); // moveing the cells into the center           
       }
       }
     }
