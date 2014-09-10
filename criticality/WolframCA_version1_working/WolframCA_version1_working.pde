@@ -37,19 +37,22 @@ void setup() {
   for (int i = 0; i <= 54; i++) //set the arduino digital pins as outputs
   arduino.pinMode(i, Arduino.OUTPUT); 
  
-  PFont font = createFont("arial",20);
+  PFont font = createFont("arial",40);
  
   cp5 = new ControlP5(this);
   
   cp5.addTextfield("input")
-     .setPosition(20,100)
-     .setSize(200,40)
+     .setPosition(20,20)
+     .setSize(100,40)
      .setFont(font)
      .setFocus(true)
-     .setColor(color(255,0,0))
+     .setColor(color(0))
+     .setColorActive(color(0))
+     .setColorBackground(color(255))
+     .setColorCaptionLabel(color(5))
      ;
      
-  frameRate(60);
+  frameRate(18);
   background(255);
   //int[] ruleset = {0,1,1,1,1,0,1,1};   // Rule 222  
  // int[] ruleset = {0,1,1,1,1,1,0,1};   // Rule 190  
@@ -62,28 +65,10 @@ void setup() {
 
 void draw() {
   background(255);
-  
-  text(cp5.get(Textfield.class,"input").getText(), 360,130);
-  text(textValue, 360,180);
-  
+    
   ca.display();          // Draw the CA
   ca.generate();
 }
-
-
-public void clear() {
-  cp5.get(Textfield.class,"textValue").clear();
-}
-
-void controlEvent(ControlEvent theEvent) {
-  if(theEvent.isAssignableFrom(Textfield.class)) {
-    println("controlEvent: accessing a string from controller '"
-            +theEvent.getName()+"': "
-            +theEvent.getStringValue()
-            );
-  }
-}
-
 
 public void input(String theText) {
  rulegenerator((byte)Integer.parseInt(theText));
