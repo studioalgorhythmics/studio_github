@@ -63,9 +63,6 @@ class CA {
   void display() {
     int offset = generation%rows;
     for (int i = 0; i < cols; i++) { 
-      println((i+2));
-   
-
       for (int j = 0; j < rows; j++) {
         int y = j - offset;
         if (y <= 0) y = rows + y;
