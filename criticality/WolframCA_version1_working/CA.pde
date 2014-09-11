@@ -37,7 +37,12 @@ class CA {
         matrix[i][j] = 0;
       }
     }
-    matrix[cols/2][0] = 1;    // We arbitrarily start with just the middle cell having a state of "1"
+   // matrix[cols/2][0] = 1;    // We arbitrarily start with just the middle cell having a state of "1"
+    
+    for (int i = 0; i < cols; i++) {
+     matrix[i][0] = (int) random(2);
+    }
+      
     generation = 0;
   }
 
