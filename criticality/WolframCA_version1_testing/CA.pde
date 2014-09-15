@@ -58,7 +58,7 @@ class CA {
       matrix[i][(generation+1)%rows] = rules(left, me, right); // Compute next generation state based on ruleset
       
       if (matrix[i][(generation+1)%rows] == 1) {
-      arduino.digitalWrite(i+2, Arduino.HIGH);     
+      arduino.digitalWrite(i+2, Arduino.HIGH); 
       
     }
       else {arduino.digitalWrite(i+2, Arduino.LOW);
