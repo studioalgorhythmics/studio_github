@@ -71,7 +71,7 @@ void draw() {
   
   int[] ruleset = {0,1,1,1,1,1,0,1};
   delay(1000);
-  int[] ruleset = {0,1,0,1,1,0,1,0}; 
+ // int[] ruleset = {0,1,0,1,1,0,1,0}; 
 }
 
 public void input(String theText) {
@@ -87,5 +87,3 @@ ruleset[i] = (rulenumber & 1) == 0 ? 0 : 1;
 }
   ca = new CA(ruleset);                 // Initialize CA
 }
-
-
